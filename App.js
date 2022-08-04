@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Detail from './src/screens/Detail/Detail';
-import Fee from './src/screens/Fee/Fee';
 import Profile from './src/screens/Profile/Profile';
 import AppNavigations from './src/navigations/AppNavigations';
 
