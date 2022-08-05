@@ -17,9 +17,9 @@ const AppNavigations = () => {
       <Stack.Screen
         name="Discover"
         component={Home}
-        // options={{
-        //   headerShown: false,
-        // }}
+        options={{
+          headerTitleAlign: 'center'
+        }}
       />
       <Stack.Screen
         name="Detail"

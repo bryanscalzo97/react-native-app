@@ -1,9 +1,10 @@
-import { View, Text, FlatList, TouchableHighlight, ImageBackground } from 'react-native'
+import { View, Text, FlatList, TouchableHighlight, ImageBackground, Animated } from 'react-native'
 import React, {useState, useEffect} from 'react'
 import { LinearGradient } from "expo-linear-gradient";
 import styles from './styles';
 
 const Home = ({ navigation }) => {
+
     const [images, setImages] = useState([])
 
     useEffect(() => {
@@ -18,8 +19,7 @@ const Home = ({ navigation }) => {
         fetchImages();
     }, [])
 
-    // pasar solo el id y sepaar responsabilidades
-    const onPressPlayer = (item) => {
+    const onPressImage = (item) => {
       const id = item.id
         navigation.navigate("Detail", { id });
       };
@@ -27,7 +27,7 @@ const Home = ({ navigation }) => {
       const renderImage = ({ item }) => (
         <TouchableHighlight
           underlayColor="none"
-          onPress={() => onPressPlayer(item)}
+          onPress={() => onPressImage(item)}
           style={styles.cardContainer}
         >
           <ImageBackground
@@ -37,21 +37,22 @@ const Home = ({ navigation }) => {
           >
             
             <View style={styles.cardInfo}>
-            <LinearGradient
-              colors={["rgba(0, 0, 0, 0.1) -60.17%", "rgba(0, 0, 0, 1) 66.1%"]}
-              style={styles.gradient}
-            >
-              <View style={styles.imageInfo}>
-                <Text style={styles.cardTitle}>{item.id}</Text>
-                <Text style={styles.cardLikes}>{item.likes} likes</Text>
-              </View>
-          </LinearGradient>
+              <LinearGradient
+                colors={["rgba(0, 0, 0, 0.1) -60.17%", "rgba(0, 0, 0, 1) 66.1%"]}
+                style={styles.gradient}
+              >
+                <View style={styles.imageInfo}>
+                  <Text style={styles.cardTitle}>{item.id}</Text>
+                  <Text style={styles.cardLikes}>{item.likes} likes</Text>
+                </View>
+              </LinearGradient>
             </View>
           </ImageBackground>
         </TouchableHighlight>
       );
       
   return (
+    
     <View style={styles.homeContainer}>
       <FlatList
           style={{margin:5}}

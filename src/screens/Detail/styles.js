@@ -4,6 +4,9 @@ const styles = StyleSheet.create({
   homeContainer: {
     flex: 1,
   },
+  exitButtonContainer: {
+    paddingLeft: 30
+  },
   row: {
     flex: 1,
     justifyContent: "space-evenly",
@@ -14,8 +17,10 @@ cardBackground: {
 },
 homeContainer: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#000',
     justifyContent: 'space-around',
+    opacity:0.6,
+    paddingTop: 36
 },
 cardContainer: {
     margin: 10,
@@ -26,6 +31,16 @@ height: 468,
 justifyContent: 'space-between',
 borderRadius: 10,
 justifyContent: 'flex-end',
+
+},
+cardInfoHidden: {
+  flex: 1,
+  height: 468,
+  justifyContent: 'space-between',
+  borderRadius: 10,
+  justifyContent: 'flex-end',
+  opacity: 0, 
+  height: 0
 },
 imageInfo: {
 
@@ -35,10 +50,8 @@ imageInfo: {
  color: '#FFFFFF'
 },
 gradient: {
-borderBottomLeftRadius: 10,
-borderBottomRightRadius: 10,
 height: 238,
-padding: 26
+padding: 30
 },
 cardTitle: {
  color: '#FFFFFF',
@@ -47,6 +60,33 @@ cardTitle: {
 cardLikes: {
 color: '#FFFFFF',
  fontSize: 14,
+},
+userContainer: {
+  flexDirection: 'row',
+  color: '#fff'
+},
+userName: {
+  color: '#fff',
+  fontSize: 12
+},
+userProfile: {
+  color: '#fff',
+  fontSize: 10
+},
+userInfo: {
+  padding: 10
+},
+userImage: {
+  width: 37,
+  height: 37,
+  borderRadius: 40
+},
+TouchableContainer: {
+  flex: 1,
+},
+container: {
+  
+  flex: 1,
 }
 });
 
