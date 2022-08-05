@@ -1,7 +1,7 @@
 # React Native App Challenge
-##Clone Repository
+## Clone Repository
 ` git clone  https://github.com/bryanscalzo97/react-native-app.git`
-##Install Dependencies
+## Install Dependencies
 ` npm install `
 ## Usage with Expo Client App
 - Download the "Expo Client" app from the Play Store or App Store.
